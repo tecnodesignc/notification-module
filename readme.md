@@ -1,15 +1,15 @@
 # Notification module
 
-[![Latest Version](https://img.shields.io/packagist/v/asgardcms/notification-module.svg?style=flat-square)](https://github.com/asgardcms/notification/releases)
+[![Latest Version](https://img.shields.io/packagist/v/tecnodesignc/notification-module.svg?style=flat-square)](https://github.com/tecnodesignc/notification/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/AsgardCms/Notification/master.svg?style=flat-square)](https://travis-ci.org/AsgardCms/Notification)
-[![Quality Score](https://img.shields.io/scrutinizer/g/asgardcms/notification.svg?style=flat-square)](https://scrutinizer-ci.com/g/asgardcms/notification)
+[![Quality Score](https://img.shields.io/scrutinizer/g/tecnodesignc/notification.svg?style=flat-square)](https://scrutinizer-ci.com/g/tecnodesignc/notification)
 [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/0d8f61c7-0e2f-46b2-9f63-91f4d5abeca5.svg)](https://insight.sensiolabs.com/projects/0d8f61c7-0e2f-46b2-9f63-91f4d5abeca5)
 
-[![Total Downloads](https://img.shields.io/packagist/dd/asgardcms/notification-module.svg?style=flat-square)](https://packagist.org/packages/asgardcms/notification-module)
-[![Total Downloads](https://img.shields.io/packagist/dm/asgardcms/notification-module.svg?style=flat-square)](https://packagist.org/packages/asgardcms/notification-module)
-[![Total Downloads](https://img.shields.io/packagist/dt/asgardcms/notification-module.svg?style=flat-square)](https://packagist.org/packages/asgardcms/notification-module)
-[![Slack](http://slack.asgardcms.com/badge.svg)](http://slack.asgardcms.com/)
+[![Total Downloads](https://img.shields.io/packagist/dd/tecnodesignc/notification-module.svg?style=flat-square)](https://packagist.org/packages/tecnodesignc/notification-module)
+[![Total Downloads](https://img.shields.io/packagist/dm/tecnodesignc/notification-module.svg?style=flat-square)](https://packagist.org/packages/tecnodesignc/notification-module)
+[![Total Downloads](https://img.shields.io/packagist/dt/tecnodesignc/notification-module.svg?style=flat-square)](https://packagist.org/packages/tecnodesignc/notification-module)
+[![Slack](http://slack.tecnodesignc.com/badge.svg)](http://slack.tecnodesignc.com/)
 
 
 Quickly send (real-time) notifications to your AsgardCms application.
@@ -38,10 +38,10 @@ public function push($title, $message, $icon, $link = null);
 
 ### Module Download
 
-Using AsgardCMS's module download command:
+Using EncoreCMS's module download command:
 
 ``` bash
-php artisan asgard:download:module asgardcms/notification --migrations
+php artisan asgard:download:module tecnodesignc/notification --migrations
 ```
 
 This will download the module and run its migrations .
@@ -53,7 +53,7 @@ This is the recommended way if you wish to customise the fields, views, etc.
 Execute the following command in your terminal:
 
 ``` bash
-composer require asgardcms/notification-module
+composer require tecnodesignc/notification-module
 ```
 
 **Note: After installation you'll have to give you the required permissions to get to the blog module pages in the backend.**

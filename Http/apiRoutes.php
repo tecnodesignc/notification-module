@@ -5,39 +5,26 @@ use Illuminate\Routing\Router;
 /** @var Router $router */
 $router->notification('notification/mark-read', ['as' => 'api.notification.read', 'uses' => 'NotificationsController@markAsRead']);
 $router->group(['prefix' => 'notification'], function (Router $router) {
-    //Route create
-    $router->notification('/', [
-        'as' => 'api.notification.notification.create',
-        'uses' => 'NotificationApiController@create',
-        'middleware' => ['auth:api']
-    ]);
 
-    //Route index
     $router->get('/', [
         'as' => 'api.notification.notification.index',
-        'uses' => 'NotificationApiController@index',
-        'middleware' => ['auth:api']
+        'uses' => 'NotificationsController@index',
+        'middleware' => 'can:notification.notifications.index',
     ]);
-
-    //Route show
-    $router->get('/{criteria}', [
-        'as' => 'api.notification.notification.show',
-        'uses' => 'NotificationApiController@show',
-        'middleware' => ['auth:api']
+    $router->get('/markAllAsRead', [
+        'as' => 'api.notification.notification.markAllAsRead',
+        'uses' => 'NotificationsController@markAllAsRead',
+        'middleware' => 'can:notification.notifications.markAllAsRead',
     ]);
-
-    //Route update
-    $router->put('/{criteria}', [
-        'as' => 'api.notification.notification.update',
-        'uses' => 'NotificationApiController@update',
-        'middleware' => ['auth:api']
+    $router->delete('/destroyAll', [
+        'as' => 'api.notification.notification.destroyAll',
+        'uses' => 'NotificationsController@destroyAll',
+        'middleware' => 'can:notification.notifications.destroyAll',
     ]);
-
-    //Route delete
-    $router->delete('/{criteria}', [
-        'as' => 'api.notification.notification.delete',
-        'uses' => 'NotificationApiController@delete',
-        'middleware' => ['auth:api']
+    $router->delete('/{notification}', [
+        'as' => 'api.notification.notification.destroy',
+        'uses' => 'NotificationsController@destroy',
+        'middleware' => 'can:notification.notifications.destroy',
     ]);
 
 });
